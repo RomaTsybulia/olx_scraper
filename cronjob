@@ -1,0 +1,1 @@
+*/5 * * * * /usr/bin/python /path/to/scraper/scraper.py

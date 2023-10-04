@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  bot:
+    build:
+      context: ./bot.py
+    restart: always
+
+  scraper:
+    build:
+      context: ./scraper.py
+    command: ["cron", "-f"]
+    volumes:
+      - ./cronjob:/etc/cron.d/cronjob
+    restart: always
